@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(2, 4, 19);
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    box-shadow: -5px -5px#333,
+    -5px 5px#333;
+    overflow: hidden;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top: -130px;
+    background-color: rgb(29, 28, 28);
+    transform:skewY(345deg);
+    transition:.3s  ease-out;
+}
+.card:hover::before{
+    top: -200px;
+    transform:skewY(390deg)
+}
+.card img{
+    top: -20px;
+    position: absolute;
+    width: 100%;
+    transition: .3s;
+}
+.card:hover img{
+    top: 10%;
+    left: 17%;
+    width: 70%;
+    transition: .3s ease-out;
+}
+.card h3{
+    position: absolute;
+    left: 35%;
+    bottom: 20%;
+    transition: .3s;
+}
+.card:hover h3{
+    transition: .3s;
+    top: 65%;
+}
+.card:hover h4{
+    top: 73%;
+    transition: .3s;
+}
+.card h4{
+    position: absolute;
+    bottom: 12%;
+    left: 37%;
+    transition: .3s;
+}
+.link{
+    position: absolute;
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: rgb(71, 12, 12);
+    color: #fff;
+    text-decoration: none;
+    bottom: -20%;
+    left: 28%;
+}
+.card:hover .link{
+    position: absolute;
+    bottom: 5%;
+    transition: .3s;
+}
